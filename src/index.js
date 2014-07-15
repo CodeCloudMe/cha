@@ -250,9 +250,24 @@ function textAPI(message, phoneNumber) {
 
       var Firebase = require('firebase');
 var myRootRef = new Firebase('https://talk2.firebaseio.com/rooms/'+ phoneNumber);
-myRootRef.push({"created_by":"bot","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
-console.log(JSON.stringify({"created_by":"bot","created_at":JSON.stringify(new Date()).split('"')[1], "content":response}));
-     
+//rRef.push(0);
+count=0;
+myRootRef.on('value', function(snapshot) {
+   
+   snapshot.forEach(function() {
+       count++;
+   });
+   
+
+   //count is now safe to use.
+});
+
+setTimeout(function(){
+
+   ref10= myRootRef.child(count)
+ref10.set({"created_by":"bot","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
+
+}, 1000);
 
 
     console.log("response="+ response+ " and roomId="+phoneNumber);
@@ -328,7 +343,26 @@ function textAPI2(message, phoneNumber) {
 
           var Firebase = require('firebase');
 var myRootRef = new Firebase('https://talk2.firebaseio.com/rooms/'+ phoneNumber);
-myRootRef.push({"created_by":"bot","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
+//rRef.push(0);
+count=0
+myRootRef.on('value', function(snapshot) {
+   
+   snapshot.forEach(function() {
+       count++;
+   });
+   console.log('value');
+   console.log(count);
+
+   //count is now safe to use.
+});
+
+setTimeout(function(){
+
+   ref10= myRootRef.child(count)
+ref10.set({"created_by":"Talk2","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
+
+}, 1000);
+
 console.log(JSON.stringify({"created_by":"bot", "created_at":JSON.stringify(new Date()).split('"')[1], "content":response}));
       console.log("firebase response="+ response+ " and roomId="+phoneNumber);
 
