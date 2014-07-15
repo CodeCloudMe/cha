@@ -1,35 +1,42 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "Chummy",
+  "version": "0.0.1",
+  "description": "Talk to yourself with style",
   "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
+    "chatbot",
+    "artificial intelligence",
+    "ai"
   ],
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+  "homepage": "https://github.com/codecloud.me",
+  "bugs": {
+    "url": "http://github.com/codecloudme",
+    "email": "m@codecloud.me"
   },
-  "homepage": "http://www.openshift.com/",
+  "author": "Mike De'Shazer (http://twitter.com/itsdeshazer) based on code by Brannon Dorsey (http://brannondorsey.com)",
+  "main": "./src",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "git://github.com/brannondorsey/twilio-cleverbot.git"
   },
-
+  "dependencies" : {
+    "twilio": "1.6.x",
+    "express": "3.5.x",
+    "cleverbot-node": "0.1.2",
+    "underscore": "1.6.x",
+    "moment": "2.5.x",
+    "argv": "",
+    "client-http":"",
+    "mongodb":"",
+    "mongoose":"",
+    "mongojs":"",
+    "firebase":""
+  },
+  "scripts": {"start": "node ./../repo"},
   "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
+    "node": ">=v0.10.0"
   },
-
-  "dependencies": {
-    "express": "~3.4.4"
-  },
-  "devDependencies": {},
-  "bundleDependencies": [],
-
-  "private": true,
-  "main": "server.js"
+  "license": {
+    "url": "MIT",
+    "type": "MIT"
+  }
 }
