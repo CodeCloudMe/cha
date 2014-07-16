@@ -267,7 +267,7 @@ setTimeout(function(){
    ref10= myRootRef.child(count)
 ref10.set({"created_by":"Talk2","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
 
-}, 2000);
+}, 10);
 
 
     console.log("response="+ response+ " and roomId="+phoneNumber);
@@ -361,7 +361,7 @@ setTimeout(function(){
    ref10= myRootRef.child(count)
 ref10.set({"created_by":"Talk2","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
 
-}, 2000);
+}, 10);
 
 console.log(JSON.stringify({"created_by":"Talk2", "created_at":JSON.stringify(new Date()).split('"')[1], "content":response}));
       console.log("firebase response="+ response+ " and roomId="+phoneNumber);
