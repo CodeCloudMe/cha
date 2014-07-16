@@ -68,7 +68,9 @@ fs.readFile(__dirname + '/../data/rate_model.json', 'utf-8', function(err, data)
 
 
  app.get('/chatbot', function(req, res){
+      return;
 
+      
       var timeFormat = "YYYY/MM/DD HH:mm:ss";
       var timestamp = moment().format(timeFormat);
       console.log(req.query.msg);
@@ -267,7 +269,7 @@ setTimeout(function(){
    ref10= myRootRef.child(count)
 ref10.set({"created_by":"Talk2","created_at":JSON.stringify(new Date()).split('"')[1], "content":response});
 
-}, 10);
+}, 200);
 
 
     console.log("response="+ response+ " and roomId="+phoneNumber);
